@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7MZ-eJ-DAG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Input File-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FileViewController" customModule="PaintsShopChallengeGUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name+extention of File to write input " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xBZ-p4-b92">
+                                <rect key="frame" x="41" y="82" width="293" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1qT-Ji-UoD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter The Content of Input File Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXm-xv-gT0">
+                                <rect key="frame" x="39" y="133" width="298" height="35"/>
+                                <color key="backgroundColor" red="0.84946447609999998" green="0.96152132749999997" blue="0.86596953870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7cV-ad-c2m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0E-ie-qCO">
+                                <rect key="frame" x="41" y="355" width="296" height="40"/>
+                                <color key="backgroundColor" red="0.85321516990000001" green="1" blue="0.02493225068" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DCy-D0-ptn"/>
+                                </constraints>
+                                <state key="normal" title="Write Input File">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="writeToFilePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgS-H6-vaQ"/>
+                                    <segue destination="kbX-67-gTQ" kind="push" id="v1h-UE-0Yu"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NXx-Tz-Tms">
+                                <rect key="frame" x="35" y="195" width="306" height="135"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="WHM-nB-7bF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P0E-ie-qCO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="7UH-jN-FTT"/>
+                            <constraint firstItem="xBZ-p4-b92" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="7wU-ma-e6t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xBZ-p4-b92" secondAttribute="trailing" constant="21" id="9Ep-f2-EGN"/>
+                            <constraint firstItem="xBZ-p4-b92" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="DU4-MU-j9b"/>
+                            <constraint firstItem="P0E-ie-qCO" firstAttribute="top" secondItem="NXx-Tz-Tms" secondAttribute="bottom" constant="25" id="ECZ-0h-H1K"/>
+                            <constraint firstItem="kXm-xv-gT0" firstAttribute="top" secondItem="xBZ-p4-b92" secondAttribute="bottom" constant="21" id="Nsm-ox-rTU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NXx-Tz-Tms" secondAttribute="trailing" constant="18" id="QOC-pa-V1E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P0E-ie-qCO" secondAttribute="trailing" constant="18" id="YHX-dC-ew3"/>
+                            <constraint firstItem="kXm-xv-gT0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="bbf-5o-Tb1"/>
+                            <constraint firstItem="NXx-Tz-Tms" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="19" id="bqa-rQ-jYf"/>
+                            <constraint firstItem="NXx-Tz-Tms" firstAttribute="top" secondItem="kXm-xv-gT0" secondAttribute="bottom" constant="27" id="loq-NE-iFC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kXm-xv-gT0" secondAttribute="trailing" constant="18" id="sef-Bw-4Hb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Input File" id="p57-v9-Rao"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="fileContentLable" destination="kXm-xv-gT0" id="iBB-AU-SRt"/>
+                        <outlet property="fileContentTextView" destination="NXx-Tz-Tms" id="SiN-cM-idQ"/>
+                        <outlet property="fileNameField" destination="xBZ-p4-b92" id="ypp-bV-D5f"/>
+                        <outlet property="writeToFileButton" destination="P0E-ie-qCO" id="0Kh-e2-JEl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2086.5" y="237.5"/>
+        </scene>
+        <!--Paint Shop-->
+        <scene sceneID="SQj-rb-OlX">
+            <objects>
+                <viewController id="kbX-67-gTQ" customClass="OutputViewController" customModule="PaintsShopChallengeGUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E5u-bF-eLe"/>
+                        <viewControllerLayoutGuide type="bottom" id="rsq-Jc-WlO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2ez-pG-jFo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Input File Path with Extention" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-ek-kvB">
+                                <rect key="frame" x="22" y="85" width="328" height="29"/>
+                                <color key="backgroundColor" red="0.84946447610855103" green="0.96152132749557495" blue="0.86596953868865967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="0tO-ig-vnj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 1 to write to default output file" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ite-Q3-hFy">
+                                <rect key="frame" x="18" y="233" width="332" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kZV-dm-JtR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter 1 to read the test file" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CN-TQ-jp2">
+                                <rect key="frame" x="22" y="131" width="328" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="knG-bb-VMF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter Output File Path with Extention" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSv-Vx-58n">
+                                <rect key="frame" x="23" y="180" width="327" height="33"/>
+                                <color key="backgroundColor" red="0.84946447609999998" green="0.96152132749999997" blue="0.86596953870000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="uIJ-Vf-AJR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOF-VX-b4Q">
+                                <rect key="frame" x="18" y="281" width="328" height="40"/>
+                                <color key="backgroundColor" red="0.85321516990000001" green="1" blue="0.02493225068" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7AO-6r-XxK"/>
+                                </constraints>
+                                <state key="normal" title="Write OutPut">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="WriteOutputPressed:" destination="kbX-67-gTQ" eventType="touchUpInside" id="mLb-Gp-d8c"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-2C-hDt">
+                                <rect key="frame" x="22" y="335" width="332" height="312"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ite-Q3-hFy" firstAttribute="trailing" secondItem="2ez-pG-jFo" secondAttribute="trailingMargin" constant="-9" id="0ZR-qW-Iye"/>
+                            <constraint firstItem="rSv-Vx-58n" firstAttribute="top" secondItem="4CN-TQ-jp2" secondAttribute="bottom" constant="19" id="1Qh-BN-0PG"/>
+                            <constraint firstItem="XOF-VX-b4Q" firstAttribute="top" secondItem="ite-Q3-hFy" secondAttribute="bottom" constant="18" id="4Yj-BX-eRh"/>
+                            <constraint firstItem="4CN-TQ-jp2" firstAttribute="top" secondItem="fQ6-ek-kvB" secondAttribute="bottom" constant="17" id="5At-p0-yyC"/>
+                            <constraint firstItem="ite-Q3-hFy" firstAttribute="leading" secondItem="2ez-pG-jFo" secondAttribute="leadingMargin" constant="2" id="CPB-EC-SsJ"/>
+                            <constraint firstItem="fQ6-ek-kvB" firstAttribute="leading" secondItem="2ez-pG-jFo" secondAttribute="leadingMargin" constant="6" id="DZK-qd-nfG"/>
+                            <constraint firstAttribute="trailing" secondItem="XOF-VX-b4Q" secondAttribute="trailing" constant="29" id="G99-Vi-rCf"/>
+                            <constraint firstItem="gAh-2C-hDt" firstAttribute="top" secondItem="XOF-VX-b4Q" secondAttribute="bottom" constant="14" id="MSI-fu-tSy"/>
+                            <constraint firstItem="4CN-TQ-jp2" firstAttribute="trailing" secondItem="2ez-pG-jFo" secondAttribute="trailingMargin" constant="-9" id="Tga-5u-pwP"/>
+                            <constraint firstItem="gAh-2C-hDt" firstAttribute="leading" secondItem="2ez-pG-jFo" secondAttribute="leading" constant="22" id="Thp-Dx-t8W"/>
+                            <constraint firstItem="ite-Q3-hFy" firstAttribute="top" secondItem="rSv-Vx-58n" secondAttribute="bottom" constant="20" id="U74-0j-9LK"/>
+                            <constraint firstItem="4CN-TQ-jp2" firstAttribute="leading" secondItem="2ez-pG-jFo" secondAttribute="leadingMargin" constant="6" id="VBY-JA-uoa"/>
+                            <constraint firstItem="fQ6-ek-kvB" firstAttribute="trailing" secondItem="2ez-pG-jFo" secondAttribute="trailingMargin" constant="-9" id="bTm-Ud-x5E"/>
+                            <constraint firstItem="rsq-Jc-WlO" firstAttribute="top" secondItem="gAh-2C-hDt" secondAttribute="bottom" constant="20" id="g5H-Df-fOt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rSv-Vx-58n" secondAttribute="trailing" constant="9" id="hUZ-Bs-Z2Q"/>
+                            <constraint firstItem="fQ6-ek-kvB" firstAttribute="top" secondItem="E5u-bF-eLe" secondAttribute="bottom" constant="21" id="lj2-i1-wca"/>
+                            <constraint firstItem="XOF-VX-b4Q" firstAttribute="leading" secondItem="2ez-pG-jFo" secondAttribute="leadingMargin" constant="2" id="tT9-Pn-fCS"/>
+                            <constraint firstAttribute="trailing" secondItem="gAh-2C-hDt" secondAttribute="trailing" constant="21" id="wbB-Ed-8Iw"/>
+                            <constraint firstItem="rSv-Vx-58n" firstAttribute="leading" secondItem="2ez-pG-jFo" secondAttribute="leadingMargin" constant="7" id="xZh-3g-EOs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Paint Shop" id="jAx-cH-6Gw">
+                        <barButtonItem key="rightBarButtonItem" title="Write Input" style="done" id="QXk-TV-sxQ">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="push" id="TjH-yg-pbP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="inputField" destination="4CN-TQ-jp2" id="AaP-ap-KDI"/>
+                        <outlet property="inputLabel" destination="fQ6-ek-kvB" id="em6-9o-4Xi"/>
+                        <outlet property="outputField" destination="ite-Q3-hFy" id="cNa-gx-qrt"/>
+                        <outlet property="outputLabel" destination="rSv-Vx-58n" id="Zkv-1X-mDf"/>
+                        <outlet property="outputTextView" destination="gAh-2C-hDt" id="g0M-cQ-Ql1"/>
+                        <outlet property="writeButton" destination="XOF-VX-b4Q" id="yoG-7i-QOv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebz-Iq-Xgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596.5" y="237.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yz6-jb-gRf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7MZ-eJ-DAG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AbT-h0-mlQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kbX-67-gTQ" kind="relationship" relationship="rootViewController" id="DlJ-lW-OB1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKc-tC-jWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.5" y="237.5"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="v1h-UE-0Yu"/>
+    </inferredMetricsTieBreakers>
+</document>
