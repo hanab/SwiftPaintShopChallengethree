@@ -1,6 +1,6 @@
-# SwiftPaintShopChallengethree
+# Paint shop
 
-## paint shop iOS app and Paintshop ios framework
+### paint shop iOS app and Paintshop ios framework
 
 ## Introduction
   The project is about writing an algorithm for a paint producing factory , which minimzes the cost of production. 
